@@ -1,6 +1,5 @@
 <img width="500" height="250" alt="logo" src="https://github.com/user-attachments/assets/41eae940-f2b7-4040-8f5f-96c5565bafef" />
 
-# <em >  Challenge Amigo Secreto </em>
 <img alt="Static Badge" src="https://img.shields.io/badge/release%20date-July%202025-blue"> <img alt="Static Badge" src="https://img.shields.io/badge/licence%3A-GPL-green">
 
 # 🎁 Amigo Secreto Plus
