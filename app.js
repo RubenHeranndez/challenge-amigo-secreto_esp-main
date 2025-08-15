@@ -4,9 +4,15 @@ let nombreAmigoSecreto = [];
 function agregarAmigo(nombre) {
     nombre = document.getElementById('amigo').value
     if(nombre == ''){
-        alert("Por favor, inserte un nombre!!!!")
+        alert("Por favor, inserte un nombre!!!!");
     }else {
         nombreAmigoSecreto.push (nombre);
+        let agregandoListaAmigos = document.getElementById("listaAmigos");
+        let contenido = "";
+        for (let amigo of nombreAmigoSecreto){
+            contenido += `<li>${amigo}</li>`;
+            agregandoListaAmigos.innerHTML = contenido;
+        }
         limpiarInput();
     }
     console.log(nombreAmigoSecreto);
@@ -16,24 +22,29 @@ function limpiarInput(){
     document.getElementById('amigo').value = '';
 }
 
-/*Crea una función que recorra el array amigos y agregue 
-cada nombre como un elemento <li> dentro de una lista HTML. 
-Usa innerHTML para limpiar la lista antes de agregar nuevos elementos.
+function sortearAmigo() {
+    if (nombreAmigoSecreto == ""){
+        alert("Por favor, inserte un nombre!!!!");  
+    }else {
+        let indiceAleatorio = Math.floor(Math.random()*nombreAmigoSecreto.length);
+        let amigoAleatorio = nombreAmigoSecreto[indiceAleatorio];
+        console.log(indiceAleatorio);
+        console.log(amigoAleatorio);
+    }
+}
+
+/*Escribe una función que seleccione de manera aleatoria uno de los nombres almacenados en el array amigos. 
+Usa Math.random() y Math.floor() para obtener un índice aleatorio.
 
 Tareas específicas:
+Validar que haya amigos disponibles: Antes de sortear, 
+comprobar si el array amigos no está vacío.
 
-Obtener el elemento de la lista: Utilizar document.getElementById() 
-o document.querySelector() para seleccionar la lista donde se mostrarán 
-los amigos.
+Generar un índice aleatorio: 
+Usar Math.random() y Math.floor() para seleccionar un índice aleatorio del arreglo.
 
-Limpiar la lista existente: Establecer lista.innerHTML = "" 
-para asegurarse de que no haya duplicados al actualizar.
+Obtener el nombre sorteado: 
+Utilizar el índice aleatorio para acceder al nombre correspondiente en el arreglo.
 
-Iterar sobre el arreglo: Usa un bucle for para recorrer el arreglo 
-amigos y crear elementos de lista (<li>) para cada título.
-
-Agregar elementos a la lista: Para cada amigo, crear un nuevo 
-elemento de lista.*/
-function insertarElemento(listaAmigos) {
-    
-}
+Mostrar el resultado: 
+Actualizar el contenido del elemento de resultado utilizando document.getElementById()  e innerHTML para mostrar el amigo sorteado.*/
