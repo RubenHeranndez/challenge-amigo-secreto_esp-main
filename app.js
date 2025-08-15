@@ -24,7 +24,7 @@ function limpiarInput(){
 
 function sortearAmigo() {
     if (nombreAmigoSecreto == ""){
-        alert("No hay nombres en la lista de amigas!!!!Porfavor ingrese lista de amigos");  
+        alert("No hay nombres en la lista de amigos!!!!");  
     }else {
         let indiceAleatorio = Math.floor(Math.random()*nombreAmigoSecreto.length);
         let amigoAleatorio = nombreAmigoSecreto[indiceAleatorio];
@@ -34,5 +34,6 @@ function sortearAmigo() {
         resultadoSorteo.innerHTML = `FELICIDADES ${amigoAleatorio} GANASTE!!!!`;  
     }
 }
+
 
 
