@@ -24,27 +24,15 @@ function limpiarInput(){
 
 function sortearAmigo() {
     if (nombreAmigoSecreto == ""){
-        alert("Por favor, inserte un nombre!!!!");  
+        alert("No hay nombres en la lista de amigas!!!!Porfavor ingrese lista de amigos");  
     }else {
         let indiceAleatorio = Math.floor(Math.random()*nombreAmigoSecreto.length);
         let amigoAleatorio = nombreAmigoSecreto[indiceAleatorio];
         console.log(indiceAleatorio);
         console.log(amigoAleatorio);
+        let resultadoSorteo = document.getElementById('resultado');
+        resultadoSorteo.innerHTML = `FELICIDADES ${amigoAleatorio} GANASTE!!!!`;  
     }
 }
 
-/*Escribe una función que seleccione de manera aleatoria uno de los nombres almacenados en el array amigos. 
-Usa Math.random() y Math.floor() para obtener un índice aleatorio.
 
-Tareas específicas:
-Validar que haya amigos disponibles: Antes de sortear, 
-comprobar si el array amigos no está vacío.
-
-Generar un índice aleatorio: 
-Usar Math.random() y Math.floor() para seleccionar un índice aleatorio del arreglo.
-
-Obtener el nombre sorteado: 
-Utilizar el índice aleatorio para acceder al nombre correspondiente en el arreglo.
-
-Mostrar el resultado: 
-Actualizar el contenido del elemento de resultado utilizando document.getElementById()  e innerHTML para mostrar el amigo sorteado.*/
